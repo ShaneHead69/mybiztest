@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <title>New Session</title>
+    <head></head>
+    <body>
+        <section>
+        <div class="container_left">
+            <div class="container_header">
+                <h1>What do we do?</h1></br>
+                <div class="signup_text_left">
+                    <p>MyBizLytics.com - Bringing you Specialised Cloud Solutions</p></br>
+                    <ul>
+                        <li><p>Secure Online Solutions</p></li></br>
+                        <li><p>Partnering with leading Providers</p></li></br>
+                        <li><p>Manage your business anywhere, anytime.</p></li></br>
+                        <li><p>Data link to myPhysicians</p></li></br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+            <div class="container_right">
+                <div class="container_header">
+                    <h1>Time to Sign Up?</h1>
+                </div>
+                <div class="signup_text_left">
+                    <p>Becoming a member has the following benefits:</p>
+                    </br>
+                        <ul>
+                            <li>Integrated Observation Metrics</li></br>
+                            <li>Integration with your Smart Phone</li></br>
+                            <li>Data Analytics</li></br>
+                            <li>Secure Encryted Online Data</li></br>
+                            <li>Cloud based secure Data</li></br>
+                        </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="login">
+                <div class="container">
+                    <%= form_for(:session, url: login_path) do |f| %>
+
+                        <p class="login-only">Welcome back!</p>
+                        <p class="login-only">...now...</p>
+                        <p class="login-only">let's get started!</p>
+                        <%= f.email_field :email, :placeholder => 'Email' %>
+                        <%= f.password_field :password, :placeholder => 'Password' %>
+                        <%= f.submit "Log in", class: "form-btn" %>
+                    <% end %>
+                </div>
+            
+            </div>
+        </section>
+        
+    </body>
+</html>

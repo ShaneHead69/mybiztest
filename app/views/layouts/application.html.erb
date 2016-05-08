@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <section>
+    <div class="header">
+      <div class="container">
+
+        <div class="nav">
+          <% if current_user %>
+            <ul>
+              <li style="float: right"><%= current_user.email %></li>
+              <li><%= link_to "Log out", logout_path, method: :delete %></li>
+            </ul>
+          <% else %>
+            <ul>
+              <li><%= link_to "Log in page", login_path %></a></li>
+              <li style="float: right"><%= link_to "Sign me up", signup_path %></a></li>
+            </ul>
+          <% end %>
+          <h1 class="homepage_h1">Welcome to myBizlytics.com</h1>
+          <div class="header">
+            <div class="navmenu">
+            <% if current_user %>
+              <ul>
+                <li><%= link_to "myAccount", user_path([:id]) %></li>
+                <li><%= link_to "myNeighbours" %></li>
+                <li><%= link_to "myMedications" %></li>
+                <li><%= link_to "allPosts" %></li>
+                <li><%= link_to "myAppointments" %></li>
+                <li><%= link_to "More" %></li>
+                  <ul>
+                    <li><%= link_to "myAllergies" %></li>
+                  </ul>
+              </ul>
+            <% end %>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  </section>
+
+<%= yield %>
+
+</body>
+
+<footer>
+  <div class="footer">
+            <ul>
+                <li><%= link_to "Home", home_path %></li>
+                <li><%= link_to "Mission", mission_path %></li>
+                <li><%= link_to "About Us", aboutus_path %></li>
+                <li><%= link_to "Contact Us", contactus_path %></li>
+            </ul>
+        </div>
+</footer>
+
+</html>

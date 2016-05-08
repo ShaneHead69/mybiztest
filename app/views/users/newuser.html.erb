@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>New User Form</title>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body style="background: no-repeat linear-gradient(to bottom, #ffd900, #16421a)">
+        <div class="container_left">
+            <div class="signup_text_center">
+                <p>Left Text here for new signups how wide will this column go i probably need to set the width</p>
+                </br>
+                <h3>Compatible Wearables</h3>
+                    <div class="text_circle">
+                        <p>Bio</p>
+                        <p>FitBit</p>
+                        </br>
+                        </br>
+                    </div>
+                <h3 class="signup_text_center">Connecting you via</h3>
+                    <div class="text_circle">
+                        </br>
+                        <p>myGP</p></br>
+                        <p>mySpecialist</p></br>
+                        <p>myPharmacy</p>
+                        </br>
+                    </div>
+            </div>
+        </div>
+        <div class="container_right">
+            <div class="signup_text_center">
+                <h2>Sign Up Now for Immediate Membership</h2>
+                <h3 style="color: #0000ff">Benefits Include</h3>
+                    <div class="text_circle">
+                        </br>
+                        <h5>Integrated Metrics</h5></br>
+                        <h5>Infant Specialised</h5></br>
+                        <h5>myNeighbourHood Alerts</h5></br>
+                        <h5>Smartphone Integrated</h5></br>
+                    </div>
+                <h3 class="signup_text_center">Not To Mention...</h3>
+                    <div class="text_circle">
+                        </br>
+                        <p>myNeighbourHood</p></br>
+                        <p>myMedHistory</p></br>
+                        <p>myPrescriptions</p></br>
+                    </div>
+            </div>
+
+        </div>
+        <div class="login">
+            <div class="containerhalf">
+                <%= form_for(:user, url: '/users') do |f| %>
+                    <%= f.text_field :first_name, :placeholder => "First Name" %>
+                    <%= f.text_field :last_name, :placeholder => "Last Name" %>
+                    <%= f.email_field :email, :placeholder => "Email Address" %>
+                    <%= f.password_field :password, :placeholder => "Password - length 6-15 characters" %>
+                    
+                    <%= f.submit "Create an account", class: "form-btn" %>
+                <% end %>
+            </div>
+
+            <%= link_to 'Back', users_path %>
+                    
+            <div class="logo">
+                <img src="https://bbandwearables.files.wordpress.com/2015/07/heart-exercising.jpg" />
+            </div>
+        
+        </div>
+
+    
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+    <script src="users.js"></script>
+    
+
+    </body>
+</html>

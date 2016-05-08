@@ -1,0 +1,26 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.circle {
+  display: inline-block;
+  background: radial-gradient(circle closest-side, white 65%, #4a9552 85%, #ff6a00 100%);
+  text-align: center;
+  height: 300px;
+  width: 100%;
+  margin: auto;
+}
+
+/*# sourceMappingURL=users.css.map */
+
+.text_circle {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 5px;
+  border: 6px solid #ff9d00;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #ffce7f;
+  color: #54331c;
+}
