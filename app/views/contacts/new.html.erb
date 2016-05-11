@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+        <title>New ConTact Form</title>
+        <head>
+            <meta charset="utf-8" />
+        </head>
+        <section class="home">
+            <div class="container">
+                <div class="corporate_page_header">
+                    <h2>Maintain ConTacts</h>
+                </div>
+            </div>
+        </section>
+            <%= form_for(:contact, url: '/contacts') do |f| %>
+                <%= f.text_field :contactname, :placeholder => "ConTact Name" %>
+                <%= f.text_field :contactref, :placeholder => "ConTact Reference" %>
+                <%= f.email_field :contactemail, :placeholder => "ConTact Email Address" %>
+                <%= f.text_field :contactperson, :placeholder => "ConTact Email Person" %>
+            
+                <%= f.submit "Create ConTact", class: "form-btn" %>
+            <% end %>
+            
+
+</html>

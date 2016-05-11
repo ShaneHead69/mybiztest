@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+        <title>ConTact Index Form</title>
+        <head>
+            <meta charset="utf-8" />
+        </head>
+        <section class="home">
+            <div class="container">
+                <div class="corporate_page_header">
+                    <h2>ConTacts List</h>
+                </div>
+            </div>
+        </section>
+        
+        <table>
+          <thead>
+            <tr>
+              <th colspan="4"></th>
+            </tr>
+            <tr>
+              <th>Name</th>
+              <th>Ref</th>
+              <th>Email</th>
+              <th>Person</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @contacts.each do |contact| %>
+              <tr>
+                <td><%= contact.contactname %></td>
+                <td><%= contact.contactref %></td>
+                <td><%= contact.contactemail %></td>
+                <td><%= contact.contactperson %></td>
+              </tr>
+              <tr>
+                <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+                <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <section>
+            <%= link_to 'New ConTact', new_contact_path %>
+        </section>
+
+
+</html>

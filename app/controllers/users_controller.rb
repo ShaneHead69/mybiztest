@@ -30,7 +30,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         #respond_to do |format|
             if @user.update_attributes(user_params)
-                redirect_to users_path, :notice=>'Account updated'
+                redirect_to users_path
             end
         #end
     end

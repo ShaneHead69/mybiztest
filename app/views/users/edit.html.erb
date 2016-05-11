@@ -19,7 +19,7 @@
                 <%= user.submit "Update myAccount", class: "form-btn" %>
             <% end %>
             </br>
-            <%= link_to 'Edit', edit_user_path(@user) %> |
+            <%= link_to 'Edit', edit_user_path([:id]) %> |
             <% if current_user.sysadmin? %>
                 <%= link_to 'Back', users_path %>
             <% end %>

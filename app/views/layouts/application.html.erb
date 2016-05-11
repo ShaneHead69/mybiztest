@@ -28,8 +28,8 @@
             <div class="navmenu">
             <% if current_user %>
               <ul>
-                <li><%= link_to "myAccount", edit_user_path([:id]) %></li>
-                <li><%= link_to "myConTacts" %></li>
+                <li><%= link_to "myAccount", users_path %></li>
+                <li><%= link_to "myConTacts", contacts_path %></li>
                 <li><%= link_to "myContRacts" %></li>
                 <li><%= link_to "myContRactClaims" %></li>
                 <li><%= link_to "myAppointments..TBD" %></li>

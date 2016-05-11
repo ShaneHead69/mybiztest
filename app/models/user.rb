@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
     end
        
     def sysadmin?
-        self.role == "SystemAdmin"
+        self.role == "sysadmin"
     end
 end
