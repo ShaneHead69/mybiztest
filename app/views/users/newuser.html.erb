@@ -4,24 +4,27 @@
     <head>
         <meta charset="utf-8" />
     </head>
-    <body style="background: no-repeat linear-gradient(to bottom, #ffd900, #16421a)">
+    <body style="background: no-repeat linear-gradient(to bottom, #9BE1FB, #16421a)">
         <div class="container_left">
             <div class="signup_text_center">
                 <p>Left Text here for new signups how wide will this column go i probably need to set the width</p>
                 </br>
-                <h3>Compatible Wearables</h3>
+                <h3>Construction Industry</h3>
                     <div class="text_circle">
-                        <p>Bio</p>
-                        <p>FitBit</p>
+                        </br>
+                        </br>
+                        <p>ContRact Management</p>
+                        </br>
+                        <p>Claim Management</p>
                         </br>
                         </br>
                     </div>
                 <h3 class="signup_text_center">Connecting you via</h3>
                     <div class="text_circle">
                         </br>
-                        <p>myGP</p></br>
-                        <p>mySpecialist</p></br>
-                        <p>myPharmacy</p>
+                        <p>myBizLink</p></br>
+                        <p>mySuppliers</p></br>
+                        <p>myConTacts</p>
                         </br>
                     </div>
             </div>
@@ -33,16 +36,16 @@
                     <div class="text_circle">
                         </br>
                         <h5>Integrated Metrics</h5></br>
-                        <h5>Infant Specialised</h5></br>
-                        <h5>myNeighbourHood Alerts</h5></br>
+                        <h5>Industry Specialised</h5></br>
+                        <h5>Customisable Alerts</h5></br>
                         <h5>Smartphone Integrated</h5></br>
                     </div>
                 <h3 class="signup_text_center">Not To Mention...</h3>
                     <div class="text_circle">
                         </br>
-                        <p>myNeighbourHood</p></br>
-                        <p>myMedHistory</p></br>
-                        <p>myPrescriptions</p></br>
+                        <p>myContacts</p></br>
+                        <p>myJobs</p></br>
+                        <p>myPayments</p></br>
                     </div>
             </div>
 
@@ -50,8 +53,8 @@
         <div class="login">
             <div class="containerhalf">
                 <%= form_for(:user, url: '/users') do |f| %>
-                    <%= f.text_field :first_name, :placeholder => "First Name" %>
-                    <%= f.text_field :last_name, :placeholder => "Last Name" %>
+                    <%= f.text_field :firstname, :placeholder => "First Name" %>
+                    <%= f.text_field :lastname, :placeholder => "Last Name" %>
                     <%= f.email_field :email, :placeholder => "Email Address" %>
                     <%= f.password_field :password, :placeholder => "Password - length 6-15 characters" %>
                     

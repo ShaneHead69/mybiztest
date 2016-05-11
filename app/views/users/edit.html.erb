@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <title>Edit User Page - restricted Use</title>
+    <head></head>
+    <body>
+        <div class="corporate_page_header">
+            <h1>Showing User</h1></br><p id="notice"><%= notice %></p></br>
+        </div>
+        <div class="user_showpage">
+            <%= form_for(@user) do |user| %>
+                <%= user.label :Name %>
+                <%= user.text_field :firstname %>
+                <%= user.text_field :lastname %></br></br>
+                <%= user.hidden_field :id %>
+                <%= user.hidden_field :email %>
+                <% if current_user.sysadmin? %>
+                    <%= user.text_field :role %>
+                <% end %>
+                <%= user.submit "Update myAccount", class: "form-btn" %>
+            <% end %>
+            </br>
+            <%= link_to 'Edit', edit_user_path(@user) %> |
+            <% if current_user.sysadmin? %>
+                <%= link_to 'Back', users_path %>
+            <% end %>
+            </br>
+        </div>
+    </body>
+</html>

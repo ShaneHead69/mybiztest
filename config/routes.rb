@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   
-  resources :users
-  
-  resources :contracts
-  
   root 'sessions#home'
   
-  get 'signup' => 'users#new'
-  get 'new' => 'users#new'
+  resources :users
+  resources :contacts do
+    resources :contracts
+  end
+  
   get 'signup' => 'users#newuser'
+  #get 'new' => 'users#newuser'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
