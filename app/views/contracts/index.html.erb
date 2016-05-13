@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<h1>ContRact Listing</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>colspan="4"</th>
+        </tr>
+        <tr>
+            <th>Contract Date</th>
+            <th>Reference</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <% @contracts.each do |contract| %>
+        <tr>
+            <td><%=contract.contractdate %></td>
+            <td><%=contract.contractref %></td>
+            <td><%=contract.contractprice %></td>
+            <td><%=contract.contractdesc %></td>
+        </tr>
+        <tr>
+            <td><%=link_to 'Edit', edit_contact_contract_path(contract) %></td>
+            <td><%=link_to 'Destroy', contract, method: :delete, data: {confirm: 'Are you sure?') %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

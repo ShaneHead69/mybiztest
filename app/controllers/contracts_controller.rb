@@ -3,7 +3,7 @@ class ContractsController < ApplicationController
     before_filter :load_contact
     
     def index
-        @contract = @contact.contract.all
+        @contracts = @contact.contract.all
     end
     
     def new
