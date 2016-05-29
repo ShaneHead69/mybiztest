@@ -1,0 +1,1 @@
+json.extract! @djrmaster, :id, :subdate, :subnum, :subform, :subformver, :sectname, :projname, :djrdate, :weather, :foreman, :jobphase, :worktoday, :accdelay, :workschednextday, :created_at, :updated_at

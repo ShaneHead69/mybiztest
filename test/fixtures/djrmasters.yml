@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subdate: 2016-05-29
+  subnum: 1
+  subform: MyString
+  subformver: 
+  sectname: MyString
+  projname: MyString
+  djrdate: 2016-05-29
+  weather: MyString
+  foreman: MyString
+  jobphase: MyString
+  worktoday: MyString
+  accdelay: MyString
+  workschednextday: MyString
+
+two:
+  subdate: 2016-05-29
+  subnum: 1
+  subform: MyString
+  subformver: 
+  sectname: MyString
+  projname: MyString
+  djrdate: 2016-05-29
+  weather: MyString
+  foreman: MyString
+  jobphase: MyString
+  worktoday: MyString
+  accdelay: MyString
+  workschednextday: MyString

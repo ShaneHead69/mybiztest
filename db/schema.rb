@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160508101624) do
+ActiveRecord::Schema.define(version: 20160529111932) do
 
   create_table "claimpayments", force: :cascade do |t|
     t.integer  "paymentschedule_id"
@@ -79,6 +79,24 @@ ActiveRecord::Schema.define(version: 20160508101624) do
     t.integer  "contractretentionrate"
     t.datetime "created_at",                                       null: false
     t.datetime "updated_at",                                       null: false
+  end
+
+  create_table "djrmasters", force: :cascade do |t|
+    t.date     "subdate"
+    t.integer  "subnum"
+    t.string   "subform"
+    t.integer  "subformver"
+    t.string   "sectname"
+    t.string   "projname"
+    t.date     "djrdate"
+    t.string   "weather"
+    t.string   "foreman"
+    t.string   "jobphase"
+    t.string   "worktoday"
+    t.string   "accdelay"
+    t.string   "workschednextday"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "paymentschedules", force: :cascade do |t|

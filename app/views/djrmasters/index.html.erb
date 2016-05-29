@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Djrmasters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subdate</th>
+      <th>Subnum</th>
+      <th>Subform</th>
+      <th>Subformver</th>
+      <th>Sectname</th>
+      <th>Projname</th>
+      <th>Djrdate</th>
+      <th>Weather</th>
+      <th>Foreman</th>
+      <th>Jobphase</th>
+      <th>Worktoday</th>
+      <th>Accdelay</th>
+      <th>Workschednextday</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @djrmasters.each do |djrmaster| %>
+      <tr>
+        <td><%= djrmaster.subdate %></td>
+        <td><%= djrmaster.subnum %></td>
+        <td><%= djrmaster.subform %></td>
+        <td><%= djrmaster.subformver %></td>
+        <td><%= djrmaster.sectname %></td>
+        <td><%= djrmaster.projname %></td>
+        <td><%= djrmaster.djrdate %></td>
+        <td><%= djrmaster.weather %></td>
+        <td><%= djrmaster.foreman %></td>
+        <td><%= djrmaster.jobphase %></td>
+        <td><%= djrmaster.worktoday %></td>
+        <td><%= djrmaster.accdelay %></td>
+        <td><%= djrmaster.workschednextday %></td>
+        <td><%= link_to 'Show', djrmaster %></td>
+        <td><%= link_to 'Edit', edit_djrmaster_path(djrmaster) %></td>
+        <td><%= link_to 'Destroy', djrmaster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Djrmaster', new_djrmaster_path %>

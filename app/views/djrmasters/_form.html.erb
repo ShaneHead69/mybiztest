@@ -1,0 +1,69 @@
+<%= form_for(@djrmaster) do |f| %>
+  <% if @djrmaster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@djrmaster.errors.count, "error") %> prohibited this djrmaster from being saved:</h2>
+
+      <ul>
+      <% @djrmaster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subdate %><br>
+    <%= f.date_select :subdate %>
+  </div>
+  <div class="field">
+    <%= f.label :subnum %><br>
+    <%= f.number_field :subnum %>
+  </div>
+  <div class="field">
+    <%= f.label :subform %><br>
+    <%= f.text_field :subform %>
+  </div>
+  <div class="field">
+    <%= f.label :subformver %><br>
+    <%= f.text_field :subformver %>
+  </div>
+  <div class="field">
+    <%= f.label :sectname %><br>
+    <%= f.text_field :sectname %>
+  </div>
+  <div class="field">
+    <%= f.label :projname %><br>
+    <%= f.text_field :projname %>
+  </div>
+  <div class="field">
+    <%= f.label :djrdate %><br>
+    <%= f.date_select :djrdate %>
+  </div>
+  <div class="field">
+    <%= f.label :weather %><br>
+    <%= f.text_field :weather %>
+  </div>
+  <div class="field">
+    <%= f.label :foreman %><br>
+    <%= f.text_field :foreman %>
+  </div>
+  <div class="field">
+    <%= f.label :jobphase %><br>
+    <%= f.text_field :jobphase %>
+  </div>
+  <div class="field">
+    <%= f.label :worktoday %><br>
+    <%= f.text_field :worktoday %>
+  </div>
+  <div class="field">
+    <%= f.label :accdelay %><br>
+    <%= f.text_field :accdelay %>
+  </div>
+  <div class="field">
+    <%= f.label :workschednextday %><br>
+    <%= f.text_field :workschednextday %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
